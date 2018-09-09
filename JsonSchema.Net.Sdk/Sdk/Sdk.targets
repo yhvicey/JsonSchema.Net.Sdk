@@ -1,0 +1,16 @@
+<Project>
+  <Import Project="Sdk.targets" Sdk="Microsoft.Build.NoTargets" Version="1.0.40" />
+
+  <PropertyGroup>
+    <JsonSchemaSdkAssembly Condition="$(JsonSchemaSdkAssembly) == ''">$(MSBuildThisFileDirectory)..\tools\JsonSchema.Net.Sdk.dll</JsonSchemaSdkAssembly>
+  </PropertyGroup>
+
+  <UsingTask TaskName="JsonSchema.Net.Sdk.GenerateCSFile" AssemblyFile="$(JsonSchemaSdkAssembly)" />
+  <UsingTask TaskName="JsonSchema.Net.Sdk.GenerateTSFile" AssemblyFile="$(JsonSchemaSdkAssembly)" />
+
+  <!-- Override Build target in Microsoft.Build.NoTargets -->
+  <Target Name="Build" DependsOnTargets="$(BuildDependsOn)">
+    <GenerateCSFile Condition="$(GenerateCSFile) == 'true'" Flatten="$(Flatten)" JsonSchemaFiles="@(JsonSchema)" Namespace="$(CSNamespace)" To="$(CSFileOutputPath)" />
+    <GenerateTSFile Condition="$(GenerateTSFile) == 'true'" Flatten="$(Flatten)" JsonSchemaFiles="@(JsonSchema)" Namespace="$(TSNamespace)" To="$(TSFileOutputPath)" />
+  </Target>
+</Project>

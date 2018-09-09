@@ -1,0 +1,38 @@
+<Project>
+    <Import Project="..\..\JsonSchema.Net.Sdk\Sdk\Sdk.props" />
+
+    <PropertyGroup>
+        <Flatten>False</Flatten>
+        <!-- CS Generation properties -->
+        <GenerateCSFile>True</GenerateCSFile>
+        <CSFileOutputPath>generate\cs\</CSFileOutputPath>
+        <CSNamespace>SampleProject.CS</CSNamespace>
+        <!-- TS Generation properties -->
+        <GenerateTSFile>True</GenerateTSFile>
+        <TSFileOutputPath>generate\ts\</TSFileOutputPath>
+        <TSNamespace>SampleProject.TS</TSNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <JsonSchema Include="Schema\Entity.json">
+            <Flatten>True</Flatten>
+        </JsonSchema>
+        <JsonSchema Include="Schema\Message.json">
+            <GenerateCSFile>False</GenerateCSFile>
+        </JsonSchema>
+        <JsonSchema Include="Schema\User.json">
+            <GenerateTSFile>False</GenerateTSFile>
+        </JsonSchema>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\JsonSchema.Net.Sdk\JsonSchema.Net.Sdk.csproj" />
+    </ItemGroup>
+
+    <!-- Override JsonSchemaSdkAssembly for testing -->
+    <PropertyGroup>
+        <JsonSchemaSdkAssembly>$(MSBuildThisFileDirectory)..\..\JsonSchema.Net.Sdk\bin\$(Configuration)\$(TargetFramework)\JsonSchema.Net.Sdk.dll</JsonSchemaSdkAssembly>
+    </PropertyGroup>
+
+    <Import Project="..\..\JsonSchema.Net.Sdk\Sdk\Sdk.targets" />
+</Project>

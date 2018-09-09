@@ -1,0 +1,20 @@
+<Project>
+  <Import Project="Sdk.props" Sdk="Microsoft.Build.NoTargets" Version="1.0.40" />
+
+  <!-- Specify TargetFramework for Microsoft.Build.NoTargets -->
+  <PropertyGroup>
+    <TargetFramework Condition="$(TargetFramework) == ''">netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Flatten Condition="$(Flatten) == ''">False</Flatten>
+    <!-- CS generation properties -->
+    <GenerateCSFile Condition="$(GenerateCSFile) == ''">True</GenerateCSFile>
+    <CSFileOutputPath Condition="$(CSFileOutputPath) == ''">generate\cs\</CSFileOutputPath>
+    <CSNamespace>DefaultNamespace</CSNamespace>
+    <!-- TS generation properties -->
+    <GenerateTSFile Condition="$(GenerateTSFile) == ''">False</GenerateTSFile>
+    <TSFileOutputPath Condition="$(TSFileOutputPath) == ''">generate\ts\</TSFileOutputPath>
+    <TSNamespace>DefaultNamespace</TSNamespace>
+  </PropertyGroup>
+</Project>

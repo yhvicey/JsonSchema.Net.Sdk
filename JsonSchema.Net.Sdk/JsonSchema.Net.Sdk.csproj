@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild Condition="$(Configuration) == 'Release'">True</GeneratePackageOnBuild>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <!-- Nuget package properties -->
+  <PropertyGroup>
+    <Id>JsonSchema.Net.Sdk</Id>
+    <Version>0.1.0</Version>
+    <Description>Sdk for json schema project.</Description>
+    <Authors>Vicey Wang</Authors>
+    <ProjectUrl>https://github.com/yhvicey/JsonSchema.Net.Sdk</ProjectUrl>
+    <LicenseUrl>https://vicey.mit-license.org/</LicenseUrl>
+    <Tags>Json Schema</Tags>
+  </PropertyGroup>
+
+  <!-- Nuget options -->
+  <PropertyGroup>
+    <IsTool>True</IsTool>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Sdk\**">
+      <Pack>True</Pack>
+      <PackagePath>Sdk\</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" Version="15.8.166" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.8.166" />
+    <PackageReference Include="NJsonSchema" Version="9.10.72" />
+    <PackageReference Include="NJsonSchema.CodeGeneration" Version="9.10.72" />
+    <PackageReference Include="NJsonSchema.CodeGeneration.CSharp" Version="9.10.72" />
+    <PackageReference Include="NJsonSchema.CodeGeneration.TypeScript" Version="9.10.72" />
+  </ItemGroup>
+
+</Project>
