@@ -9,12 +9,12 @@
   <!-- Nuget package properties -->
   <PropertyGroup>
     <Id>JsonSchema.Net.Sdk</Id>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Description>Sdk for json schema project.</Description>
     <Authors>Vicey Wang</Authors>
-    <ProjectUrl>https://github.com/yhvicey/JsonSchema.Net.Sdk</ProjectUrl>
-    <LicenseUrl>https://vicey.mit-license.org/</LicenseUrl>
-    <Tags>Json Schema</Tags>
+    <PackageProjectUrl>https://github.com/yhvicey/JsonSchema.Net.Sdk</PackageProjectUrl>
+    <PackageLicenseUrl>https://vicey.mit-license.org/</PackageLicenseUrl>
+    <PackageTags>Json Schema</PackageTags>
   </PropertyGroup>
 
   <!-- Nuget options -->
