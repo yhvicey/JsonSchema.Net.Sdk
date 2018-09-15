@@ -11,10 +11,10 @@
     <!-- CS generation properties -->
     <GenerateCSFile Condition="$(GenerateCSFile) == ''">True</GenerateCSFile>
     <CSFileOutputPath Condition="$(CSFileOutputPath) == ''">generate\cs\</CSFileOutputPath>
-    <CSNamespace>DefaultNamespace</CSNamespace>
+    <CSNamespace>$(MSBuildProjectName)</CSNamespace>
     <!-- TS generation properties -->
     <GenerateTSFile Condition="$(GenerateTSFile) == ''">False</GenerateTSFile>
     <TSFileOutputPath Condition="$(TSFileOutputPath) == ''">generate\ts\</TSFileOutputPath>
-    <TSNamespace>DefaultNamespace</TSNamespace>
+    <TSNamespace>$(MSBuildProjectName)</TSNamespace>
   </PropertyGroup>
 </Project>

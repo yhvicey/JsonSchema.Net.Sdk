@@ -2,10 +2,16 @@
 
 Sdk for creating json schema project.
 
+## Build
+
+Master|PR
+-|-
+[![Build status](https://vicey.visualstudio.com/GithubProjectsCICD/_apis/build/status/JsonSchema.Net.Sdk%20-%20master)](https://vicey.visualstudio.com/GithubProjectsCICD/_build/latest?definitionId=6)|[![Build status](https://vicey.visualstudio.com/GithubProjectsCICD/_apis/build/status/JsonSchema.Net.Sdk%20-%20PR)](https://vicey.visualstudio.com/GithubProjectsCICD/_build/latest?definitionId=7)
+
 ## Sample
 
 ```xml
-<Project Sdk="JsonSchema.Net.Sdk/0.1.1">
+<Project Sdk="JsonSchema.Net.Sdk/0.1.3">
     <PropertyGroup>
         <Flatten>False</Flatten>
         <!-- CS Generation properties -->
