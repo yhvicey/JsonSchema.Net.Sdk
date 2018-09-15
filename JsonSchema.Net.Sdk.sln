@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonSchema.Net.Sdk", "JsonSchema.Net.Sdk\JsonSchema.Net.Sdk.csproj", "{B5335A8D-FAD1-4F9D-B2C1-749F7A32533D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonSchema.Net.Sdk.UnitTests", "JsonSchema.Net.Sdk.Tests\JsonSchema.Net.Sdk.UnitTests\JsonSchema.Net.Sdk.UnitTests.csproj", "{B26C85CD-E966-4823-8DC7-AF4B158A0489}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonSchema.Net.Sdk.UnitTests", "Test\JsonSchema.Net.Sdk.UnitTests\JsonSchema.Net.Sdk.UnitTests.csproj", "{B26C85CD-E966-4823-8DC7-AF4B158A0489}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject", "JsonSchema.Net.Sdk.Tests\SampleProject\SampleProject.csproj", "{810FA011-EBDD-4E2A-B859-36B5EA312DB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject", "Test\SampleProject\SampleProject.csproj", "{810FA011-EBDD-4E2A-B859-36B5EA312DB6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{206FFE87-09B9-4C4D-A243-10AB24A968E7}"
 EndProject
