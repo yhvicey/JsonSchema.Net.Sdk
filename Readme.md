@@ -11,7 +11,7 @@ Master|PR
 ## Sample
 
 ```xml
-<Project Sdk="JsonSchema.Net.Sdk/0.1.3">
+<Project Sdk="JsonSchema.Net.Sdk/0.2.0">
     <PropertyGroup>
         <Flatten>False</Flatten>
         <!-- CS Generation properties -->
