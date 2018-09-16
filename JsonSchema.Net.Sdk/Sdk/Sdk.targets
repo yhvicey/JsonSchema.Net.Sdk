@@ -5,12 +5,29 @@
     <JsonSchemaSdkAssembly Condition="$(JsonSchemaSdkAssembly) == ''">$(MSBuildThisFileDirectory)..\tools\JsonSchema.Net.Sdk.dll</JsonSchemaSdkAssembly>
   </PropertyGroup>
 
-  <UsingTask TaskName="JsonSchema.Net.Sdk.GenerateCSFile" AssemblyFile="$(JsonSchemaSdkAssembly)" />
-  <UsingTask TaskName="JsonSchema.Net.Sdk.GenerateTSFile" AssemblyFile="$(JsonSchemaSdkAssembly)" />
+  <UsingTask TaskName="JsonSchema.Net.Sdk.Tasks.GenerateFile" AssemblyFile="$(JsonSchemaSdkAssembly)" />
+
+  <ItemDefinitionGroup>
+    <JsonSchema>
+      <Flatten>$(Flatten)</Flatten>
+      <GenerateFile>$(GenerateFile)</GenerateFile>
+      <FileOutputPath>$(FileOutputPath)</FileOutputPath>
+      <Namespace>$(Namespace)</Namespace>
+      <!-- CS generation properties -->
+      <CSFlatten>$(CSFlatten)</CSFlatten>
+      <CSGenerateFile>$(CSGenerateFile)</CSGenerateFile>
+      <CSFileOutputPath>$(CSFileOutputPath)</CSFileOutputPath>
+      <CSNamespace>$(CSNamespace)</CSNamespace>
+      <!-- TS generation properties -->
+      <TSFlatten>$(TSFlatten)</TSFlatten>
+      <TSGenerateFile>$(TSGenerateFile)</TSGenerateFile>
+      <TSFileOutputPath>$(TSFileOutputPath)</TSFileOutputPath>
+      <TSNamespace>$(TSNamespace)</TSNamespace>
+    </JsonSchema>
+  </ItemDefinitionGroup>
 
   <!-- Override Build target in Microsoft.Build.NoTargets -->
   <Target Name="Build" DependsOnTargets="$(BuildDependsOn)">
-    <GenerateCSFile Condition="$(GenerateCSFile) == 'true'" Flatten="$(Flatten)" JsonSchemaFiles="@(JsonSchema)" Namespace="$(CSNamespace)" To="$(CSFileOutputPath)" />
-    <GenerateTSFile Condition="$(GenerateTSFile) == 'true'" Flatten="$(Flatten)" JsonSchemaFiles="@(JsonSchema)" Namespace="$(TSNamespace)" To="$(TSFileOutputPath)" />
+    <GenerateFile JsonSchemaFiles="@(JsonSchema)" />
   </Target>
 </Project>
