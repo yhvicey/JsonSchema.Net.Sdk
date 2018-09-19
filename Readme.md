@@ -15,11 +15,11 @@ Master|PR
     <PropertyGroup>
         <Flatten>False</Flatten>
         <!-- CS Generation properties -->
-        <GenerateCSFile>True</GenerateCSFile>
+        <CSGenerateFile>True</CSGenerateFile>
         <CSFileOutputPath>generate\cs\</CSFileOutputPath>
         <CSNamespace>SampleProject.CS</CSNamespace>
         <!-- TS Generation properties -->
-        <GenerateTSFile>True</GenerateTSFile>
+        <TSGenerateFile>True</TSGenerateFile>
         <TSFileOutputPath>generate\ts\</TSFileOutputPath>
         <TSNamespace>SampleProject.TS</TSNamespace>
     </PropertyGroup>
@@ -29,10 +29,10 @@ Master|PR
             <Flatten>True</Flatten>
         </JsonSchema>
         <JsonSchema Include="Schema\Message.json">
-            <GenerateCSFile>False</GenerateCSFile>
+            <CSGenerateFile>False</CSGenerateFile>
         </JsonSchema>
         <JsonSchema Include="Schema\User.json">
-            <GenerateTSFile>False</GenerateTSFile>
+            <TSGenerateFile>False</TSGenerateFile>
         </JsonSchema>
     </ItemGroup>
 </Project>

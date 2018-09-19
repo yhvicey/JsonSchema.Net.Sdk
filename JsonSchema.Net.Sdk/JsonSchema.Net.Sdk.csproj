@@ -2,14 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <!-- Nuget package properties -->
   <PropertyGroup>
     <Id>JsonSchema.Net.Sdk</Id>
-    <Version>0.2.1</Version>
+    <Version>0.2.2</Version>
     <Description>Sdk for json schema project.</Description>
     <Authors>Vicey Wang</Authors>
     <PackageProjectUrl>https://github.com/yhvicey/JsonSchema.Net.Sdk</PackageProjectUrl>
