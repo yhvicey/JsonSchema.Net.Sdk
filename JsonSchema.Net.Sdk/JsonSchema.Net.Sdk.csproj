@@ -8,7 +8,7 @@
   <!-- Nuget package properties -->
   <PropertyGroup>
     <Id>JsonSchema.Net.Sdk</Id>
-    <Version>0.2.2</Version>
+    <Version>0.2.3</Version>
     <Description>Sdk for json schema project.</Description>
     <Authors>Vicey Wang</Authors>
     <PackageProjectUrl>https://github.com/yhvicey/JsonSchema.Net.Sdk</PackageProjectUrl>
